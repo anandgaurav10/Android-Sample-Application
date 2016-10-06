@@ -3,6 +3,8 @@ package application.sample.com.app;
 import android.app.Application;
 import android.content.Context;
 
+import com.androidnetworking.AndroidNetworking;
+
 import application.sample.com.app.injection.component.ApplicationComponent;
 import application.sample.com.app.injection.component.DaggerApplicationComponent;
 import application.sample.com.app.injection.module.ApplicationModule;
@@ -18,7 +20,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        AndroidNetworking.initialize(getApplicationContext());
         mApplicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
