@@ -40,5 +40,6 @@ ext {
     rulesVersion = '0.5'
     espressoVersion = '2.2.2'
     daggerVersion = '2.5'
+    androidNetworkingVersion = '0.2.0'
     butterknifeVersion = '8.4.0'
 }
