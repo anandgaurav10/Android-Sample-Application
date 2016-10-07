@@ -6,6 +6,8 @@ import android.content.Context;
 import javax.inject.Singleton;
 
 import application.sample.com.app.MyApplication;
+import application.sample.com.app.data.DataManager;
+import application.sample.com.app.data.local.PreferencesHelper;
 import application.sample.com.app.injection.ApplicationContext;
 import application.sample.com.app.injection.module.ApplicationModule;
 import dagger.Component;
@@ -24,4 +26,6 @@ public interface ApplicationComponent {
     Context context();
 
     Application application();
+    PreferencesHelper preferencesHelper();
+    DataManager dataManager();
 }

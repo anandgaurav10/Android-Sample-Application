@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android-Sample-Application</string>
     <string name="do_something">Do Something</string>
+    <string name="log_in">Log In</string>
 </resources>
