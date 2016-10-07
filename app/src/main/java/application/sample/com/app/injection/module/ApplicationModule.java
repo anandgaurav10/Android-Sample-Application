@@ -17,6 +17,7 @@ import dagger.Provides;
  */
 @Module
 public class ApplicationModule {
+
     protected final Application mApplication;
 
     public ApplicationModule(Application application) {
@@ -33,11 +34,5 @@ public class ApplicationModule {
     Context provideContext() {
         return mApplication;
     }
-
-//    @Provides
-//    @Singleton
-//    EventBus provideEventBus() {
-//        return new EventBus();
-//    }
 
 }
