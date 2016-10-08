@@ -14,11 +14,11 @@ public class SplashPresenter implements Presenter<SplashMvpView> {
 
     private SplashMvpView mMvpView;
 
-    @Inject
-    DataManager mDataManager;
+    private final DataManager mDataManager;
 
     @Inject
-    public SplashPresenter() {
+    public SplashPresenter(DataManager dataManager) {
+        mDataManager = dataManager;
     }
 
     @Override
@@ -32,6 +32,6 @@ public class SplashPresenter implements Presenter<SplashMvpView> {
     }
 
     public void checkLoggedInStatus() {
-        mMvpView.onLoggedInStatus(mDataManager.getPreferencesHelper().getIsLoggedIn());
+        mMvpView.onLoggedInStatus(mDataManager.getIsLoggedIn());
     }
 }

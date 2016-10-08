@@ -21,4 +21,8 @@ public class DataManager {
     public PreferencesHelper getPreferencesHelper() {
         return mPreferencesHelper;
     }
+
+    public boolean getIsLoggedIn() {
+        return mPreferencesHelper.getIsLoggedIn();
+    }
 }
